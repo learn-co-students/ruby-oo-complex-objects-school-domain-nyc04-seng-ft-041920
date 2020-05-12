@@ -2,14 +2,11 @@ require 'pry'
 # code here!
 
 class School
-    attr_writer :roster
+    attr_accessor :roster
+    
     def initialize(school)
         @school = school
         @roster = {}
-    end
-
-    def roster
-        @roster
     end
 
     def add_student(name, grade)

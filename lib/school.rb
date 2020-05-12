@@ -26,12 +26,18 @@ class School
     end 
 
     def sort 
-       sorted_keys = @roster.keys.sort 
-       sorted_roster = {}
-       sorted_keys.each do |key|
-            sorted_roster[key] = @roster[key].sort 
-       end 
-       sorted_roster
+    #    sorted_keys = @roster.keys.sort 
+    #    sorted_roster = {}
+    #    sorted_keys.each do |key|
+    #         sorted_roster[key] = @roster[key].sort 
+    #    end 
+    #    sorted_roster
+                               ##Above code is if you want to sort the hash as well (not necessary)
+        sorted_roster = {}
+        @roster.each do |grade, names|
+            sorted_roster[grade] = names.sort 
+        end 
+        sorted_roster
     end 
 
 end 

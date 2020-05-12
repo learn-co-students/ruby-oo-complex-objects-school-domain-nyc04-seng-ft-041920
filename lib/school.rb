@@ -3,7 +3,7 @@ require 'pry'
 
 class School
     attr_accessor :roster
-    
+
     def initialize(school)
         @school = school
         @roster = {}
@@ -21,10 +21,10 @@ class School
     end
 
     def sort
-        new_roster = {}
+        sorted_roster = {}
         @roster.each_pair do |key, value| 
-            new_roster[key] = value.sort
+            sorted_roster[key] = value.sort
         end
-        new_roster
+        sorted_roster
     end
 end

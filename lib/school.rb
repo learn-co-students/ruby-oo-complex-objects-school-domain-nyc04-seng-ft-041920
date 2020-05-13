@@ -14,6 +14,9 @@ class School
 
     #{9 => ["Zach Morris"]}
     def add_student(student_name, grade)
+        #http://www.rubyinside.com/what-rubys-double-pipe-or-equals-really-does-5488.html
+        # a ||= b
+        # a = a || b (if a is nil/false then set b)
         @roster[grade] ||= []
         @roster[grade] << student_name
     end
